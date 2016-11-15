@@ -97,11 +97,11 @@ server {
       <category term="博客" scheme="http://yanlongchn.com/categories/Program/Blog/"/>
     
     
-      <category term="LetsEncrypt" scheme="http://yanlongchn.com/tags/LetsEncrypt/"/>
-    
       <category term="Ghost" scheme="http://yanlongchn.com/tags/Ghost/"/>
     
       <category term="CentOS" scheme="http://yanlongchn.com/tags/CentOS/"/>
+    
+      <category term="LetsEncrypt" scheme="http://yanlongchn.com/tags/LetsEncrypt/"/>
     
   </entry>
   
@@ -302,11 +302,11 @@ net.ipv4.tcp_mtu_probing = 1
       <category term="博客" scheme="http://yanlongchn.com/categories/Program/Blog/"/>
     
     
-      <category term="LetsEncrypt" scheme="http://yanlongchn.com/tags/LetsEncrypt/"/>
-    
       <category term="Ghost" scheme="http://yanlongchn.com/tags/Ghost/"/>
     
       <category term="CentOS" scheme="http://yanlongchn.com/tags/CentOS/"/>
+    
+      <category term="LetsEncrypt" scheme="http://yanlongchn.com/tags/LetsEncrypt/"/>
     
   </entry>
   
