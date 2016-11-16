@@ -14,7 +14,7 @@
 <meta property="og:description" content="CentOSLetsEncrypt域名加SSL
 ####LetsEncrypt篇git clone https://github.com/letsencrypt/letsencryptcd letsencryptsudo service nginx stop./letsencrypt-auto certonly --standalone -d your_domain.comsudo service">
 <meta property="og:image" content="http://yanlongchn.com/images/4.jpg">
-<meta property="og:updated_time" content="2016-11-15T08:46:07.566Z">
+<meta property="og:updated_time" content="2016-11-16T04:25:10.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LetsEncrypt域名加SSL">
 <meta name="twitter:description" content="CentOSLetsEncrypt域名加SSL
@@ -273,6 +273,7 @@
             
             <p><strong>CentOS</strong><br>LetsEncrypt域名加SSL</p>
 <p>####LetsEncrypt篇<br><code>git clone https://github.com/letsencrypt/letsencrypt</code><br><code>cd letsencrypt</code><br><code>sudo service nginx stop</code><br><code>./letsencrypt-auto certonly --standalone -d your_domain.com</code><br><code>sudo service nginx start</code><br>==将your_domain.com改为自己的域名。==</p>
+<a id="more"></a>
 <p>####Ghost篇<br><code>vi /etc/nginx/conf.d/ghost.conf</code><br>全部清空==(在非插入模式下<br>输入<code>:.,$d</code>)==并粘贴进去下列配置，<br>注意需要更改所有的“your_domain.com”为自己的域名，<br>还需要正确的配置自己的密钥位置。  </p>
 <pre><code>server {  
     listen 80;
@@ -314,7 +315,7 @@ server {
 
 </div>
 
-    <a data-url="http://yanlongchn.com/2016/11/15/LetsEncrypt域名加SSL/" data-id="civkeln8k0002s8vhp3lbdu28" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yanlongchn.com/2016/11/15/LetsEncrypt域名加SSL/" data-id="civkfcwzp0001igvhgdcq0g44" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
