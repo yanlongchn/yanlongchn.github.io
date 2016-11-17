@@ -5,17 +5,17 @@
     
     <title>如何用SPSS和Clementine处理缺失值、离群值、极值？ | CHN-NO.9527 on Github</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="一、什么是预处理、预分析？高质量数据是数据分析的前提和分析结论可靠性的保障。尽管在获取数据源时数据分析师格外谨慎，耗费大量的时间，但数据质量仍然需持续关注。不管是一手还是二手数据源，总是会存在一些质量问题。同时，为了满足数据分析、挖掘的实际需要，对噪声数据如何处理，是丢弃还是补充，或者重新计算新的数据变量，这些不是随意决定的，这就是数据预处理的一个过程，是在数据分析、挖掘开始前对数据源的审核和判断">
+    <meta name="description" content="一、什么是预处理、预分析？&amp;emsp;&amp;emsp;高质量数据是数据分析的前提和分析结论可靠性的保障。尽管在获取数据源时数据分析师格外谨慎，耗费大量的时间，但数据质量仍然需持续关注。不管是一手还是二手数据源，总是会存在一些质量问题。同时，为了满足数据分析、挖掘的实际需要，对噪声数据如何处理，是丢弃还是补充，或者重新计算新的数据变量，这些不是随意决定的，这就是数据预处理的一个过程，是在数据分析、挖掘开">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何用SPSS和Clementine处理缺失值、离群值、极值？">
 <meta property="og:url" content="http://yanlongchn.com/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/index.html">
 <meta property="og:site_name" content="CHN-NO.9527 on Github">
-<meta property="og:description" content="一、什么是预处理、预分析？高质量数据是数据分析的前提和分析结论可靠性的保障。尽管在获取数据源时数据分析师格外谨慎，耗费大量的时间，但数据质量仍然需持续关注。不管是一手还是二手数据源，总是会存在一些质量问题。同时，为了满足数据分析、挖掘的实际需要，对噪声数据如何处理，是丢弃还是补充，或者重新计算新的数据变量，这些不是随意决定的，这就是数据预处理的一个过程，是在数据分析、挖掘开始前对数据源的审核和判断">
+<meta property="og:description" content="一、什么是预处理、预分析？&amp;emsp;&amp;emsp;高质量数据是数据分析的前提和分析结论可靠性的保障。尽管在获取数据源时数据分析师格外谨慎，耗费大量的时间，但数据质量仍然需持续关注。不管是一手还是二手数据源，总是会存在一些质量问题。同时，为了满足数据分析、挖掘的实际需要，对噪声数据如何处理，是丢弃还是补充，或者重新计算新的数据变量，这些不是随意决定的，这就是数据预处理的一个过程，是在数据分析、挖掘开">
 <meta property="og:image" content="http://yanlongchn.com/images/spss.png">
-<meta property="og:updated_time" content="2016-11-17T06:36:10.621Z">
+<meta property="og:updated_time" content="2016-11-17T09:00:12.160Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何用SPSS和Clementine处理缺失值、离群值、极值？">
-<meta name="twitter:description" content="一、什么是预处理、预分析？高质量数据是数据分析的前提和分析结论可靠性的保障。尽管在获取数据源时数据分析师格外谨慎，耗费大量的时间，但数据质量仍然需持续关注。不管是一手还是二手数据源，总是会存在一些质量问题。同时，为了满足数据分析、挖掘的实际需要，对噪声数据如何处理，是丢弃还是补充，或者重新计算新的数据变量，这些不是随意决定的，这就是数据预处理的一个过程，是在数据分析、挖掘开始前对数据源的审核和判断">
+<meta name="twitter:description" content="一、什么是预处理、预分析？&amp;emsp;&amp;emsp;高质量数据是数据分析的前提和分析结论可靠性的保障。尽管在获取数据源时数据分析师格外谨慎，耗费大量的时间，但数据质量仍然需持续关注。不管是一手还是二手数据源，总是会存在一些质量问题。同时，为了满足数据分析、挖掘的实际需要，对噪声数据如何处理，是丢弃还是补充，或者重新计算新的数据变量，这些不是随意决定的，这就是数据预处理的一个过程，是在数据分析、挖掘开">
 <meta name="twitter:image" content="http://yanlongchn.com/images/spss.png">
     
 
@@ -268,8 +268,12 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h4 id="一、什么是预处理、预分析？"><a href="#一、什么是预处理、预分析？" class="headerlink" title="一、什么是预处理、预分析？"></a>一、什么是预处理、预分析？</h4><p>高质量数据是数据分析的前提和分析结论可靠性的保障。尽管在获取数据源时数据分析师格外谨慎，耗费大量的时间，但数据质量仍然需持续关注。不管是一手还是二手数据源，总是会存在一些质量问题。同时，为了满足数据分析、挖掘的实际需要，对噪声数据如何处理，是丢弃还是补充，或者重新计算新的数据变量，这些不是随意决定的，这就是数据预处理的一个过程，是在数据分析、挖掘开始前对数据源的审核和判断，是数据分析必不可少的一项。本文暂只简单讨论一下缺失值、异常值的处理。</p>
+            <h4 id="一、什么是预处理、预分析？"><a href="#一、什么是预处理、预分析？" class="headerlink" title="一、什么是预处理、预分析？"></a>一、什么是预处理、预分析？</h4><p>&emsp;&emsp;高质量数据是数据分析的前提和分析结论可靠性的保障。尽管在获取数据源时数据分析师格外谨慎，耗费大量的时间，但数据质量仍然需持续关注。不管是一手还是二手数据源，总是会存在一些质量问题。同时，为了满足数据分析、挖掘的实际需要，对噪声数据如何处理，是丢弃还是补充，或者重新计算新的数据变量，这些不是随意决定的，这就是数据预处理的一个过程，是在数据分析、挖掘开始前对数据源的审核和判断，是数据分析必不可少的一项。本文暂只简单讨论一下缺失值、异常值的处理。</p>
 <a id="more"></a>
+<h4 id="二、如何发现数据质量问题，例如，如何发现缺失值？"><a href="#二、如何发现数据质量问题，例如，如何发现缺失值？" class="headerlink" title="二、如何发现数据质量问题，例如，如何发现缺失值？"></a>二、如何发现数据质量问题，例如，如何发现缺失值？</h4><h5 id="1、SPSS是如何做到的？"><a href="#1、SPSS是如何做到的？" class="headerlink" title="1、SPSS是如何做到的？"></a>1、SPSS是如何做到的？</h5><p>（1）系统缺失值、空白值</p>
+<p>每一个变量均有可能出现系统缺失或者空白，当数据量巨大时我们根本无法用眼睛看出是否有缺失，最明智的做法是把这项任务交给数据分析工具，比如Excel，可通过数据有效性、筛选、查找、计数等功能去实现，如果是SPSS数据源，可以通过描述统计之“频率”项来实现。</p>
+<p><a href="http://www.datasoldier.net/post/yuchuli.html" target="_blank" rel="external">http://www.datasoldier.net/post/yuchuli.html</a><br><a href="http://www.afenxi.com/post/3872" target="_blank" rel="external">http://www.afenxi.com/post/3872</a></p>
+
         
         </div>
         <footer class="article-footer">
@@ -279,7 +283,7 @@
 
 </div>
 
-    <a data-url="http://yanlongchn.com/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/" data-id="civlyaciy0001p0vheu8hbydh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yanlongchn.com/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/" data-id="civlzzvx70009h0vhg314rvie" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
