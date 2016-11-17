@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yanlongchn.com/"/>
-  <updated>2016-11-16T04:25:12.548Z</updated>
+  <updated>2016-11-17T06:36:10.621Z</updated>
   <id>http://yanlongchn.com/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何用SPSS和Clementine处理缺失值、离群值、极值？</title>
+    <link href="http://yanlongchn.com/2016/11/17/%E5%A6%82%E4%BD%95%E7%94%A8SPSS%E5%92%8CClementine%E5%A4%84%E7%90%86%E7%BC%BA%E5%A4%B1%E5%80%BC%E3%80%81%E7%A6%BB%E7%BE%A4%E5%80%BC%E3%80%81%E6%9E%81%E5%80%BC%EF%BC%9F/"/>
+    <id>http://yanlongchn.com/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/</id>
+    <published>2016-11-17T06:00:20.000Z</published>
+    <updated>2016-11-17T06:36:10.621Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="一、什么是预处理、预分析？"><a href="#一、什么是预处理、预分析？" class="headerlink" title="一、什么是预处理、预分析？"></a>一、什么是预处理、预分析？</h4><p>高质量数据是数据分析的前提和分析结论可靠性的保障。尽管在获取数据源时数据分析师格外谨慎，耗费大量的时间，但数据质量仍然需持续关注。不管是一手还是二手数据源，总是会存在一些质量问题。同时，为了满足数据分析、挖掘的实际需要，对噪声数据如何处理，是丢弃还是补充，或者重新计算新的数据变量，这些不是随意决定的，这就是数据预处理的一个过程，是在数据分析、挖掘开始前对数据源的审核和判断，是数据分析必不可少的一项。本文暂只简单讨论一下缺失值、异常值的处理。</p>
+<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;一、什么是预处理、预分析？&quot;&gt;&lt;a href=&quot;#一、什么是预处理、预分析？&quot; class=&quot;headerlink&quot; title=&quot;一、什么是预处理、预分析？&quot;&gt;&lt;/a&gt;一、什么是预处理、预分析？&lt;/h4&gt;&lt;p&gt;高质量数据是数据分析的前提和分析结论可靠性的保障。尽管在获取数据源时数据分析师格外谨慎，耗费大量的时间，但数据质量仍然需持续关注。不管是一手还是二手数据源，总是会存在一些质量问题。同时，为了满足数据分析、挖掘的实际需要，对噪声数据如何处理，是丢弃还是补充，或者重新计算新的数据变量，这些不是随意决定的，这就是数据预处理的一个过程，是在数据分析、挖掘开始前对数据源的审核和判断，是数据分析必不可少的一项。本文暂只简单讨论一下缺失值、异常值的处理。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据" scheme="http://yanlongchn.com/categories/Date/"/>
+    
+      <category term="SPSS" scheme="http://yanlongchn.com/categories/Date/Spss/"/>
+    
+    
+      <category term="数据分析" scheme="http://yanlongchn.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="SPSS" scheme="http://yanlongchn.com/tags/categories-spss/"/>
+    
+      <category term="Clementine" scheme="http://yanlongchn.com/tags/Clementine/"/>
+    
+  </entry>
   
   <entry>
     <title>入门级扫盲贴</title>
@@ -48,12 +77,12 @@
     <link href="http://yanlongchn.com/2016/11/15/LetsEncrypt%E5%9F%9F%E5%90%8D%E5%8A%A0SSL/"/>
     <id>http://yanlongchn.com/2016/11/15/LetsEncrypt域名加SSL/</id>
     <published>2016-11-15T05:21:50.478Z</published>
-    <updated>2016-11-16T04:25:10.314Z</updated>
+    <updated>2016-11-17T06:36:51.405Z</updated>
     
     <content type="html"><![CDATA[<p><strong>CentOS</strong><br>LetsEncrypt域名加SSL</p>
-<p>####LetsEncrypt篇<br><code>git clone https://github.com/letsencrypt/letsencrypt</code><br><code>cd letsencrypt</code><br><code>sudo service nginx stop</code><br><code>./letsencrypt-auto certonly --standalone -d your_domain.com</code><br><code>sudo service nginx start</code><br>==将your_domain.com改为自己的域名。==</p>
+<h4 id="LetsEncrypt篇"><a href="#LetsEncrypt篇" class="headerlink" title="LetsEncrypt篇"></a>LetsEncrypt篇</h4><p><code>git clone https://github.com/letsencrypt/letsencrypt</code><br><code>cd letsencrypt</code><br><code>sudo service nginx stop</code><br><code>./letsencrypt-auto certonly --standalone -d your_domain.com</code><br><code>sudo service nginx start</code><br>==将your_domain.com改为自己的域名。==</p>
 <a id="more"></a>
-<p>####Ghost篇<br><code>vi /etc/nginx/conf.d/ghost.conf</code><br>全部清空==(在非插入模式下<br>输入<code>:.,$d</code>)==并粘贴进去下列配置，<br>注意需要更改所有的“your_domain.com”为自己的域名，<br>还需要正确的配置自己的密钥位置。  </p>
+<h4 id="Ghost篇"><a href="#Ghost篇" class="headerlink" title="Ghost篇"></a>Ghost篇</h4><p><code>vi /etc/nginx/conf.d/ghost.conf</code><br>全部清空==(在非插入模式下<br>输入<code>:.,$d</code>)==并粘贴进去下列配置，<br>注意需要更改所有的“your_domain.com”为自己的域名，<br>还需要正确的配置自己的密钥位置。  </p>
 <pre><code>server {  
     listen 80;
     server_name  your_domain.com;
@@ -89,7 +118,7 @@ server {
     <summary type="html">
     
       &lt;p&gt;&lt;strong&gt;CentOS&lt;/strong&gt;&lt;br&gt;LetsEncrypt域名加SSL&lt;/p&gt;
-&lt;p&gt;####LetsEncrypt篇&lt;br&gt;&lt;code&gt;git clone https://github.com/letsencrypt/letsencrypt&lt;/code&gt;&lt;br&gt;&lt;code&gt;cd letsencrypt&lt;/code&gt;&lt;br&gt;&lt;code&gt;sudo service nginx stop&lt;/code&gt;&lt;br&gt;&lt;code&gt;./letsencrypt-auto certonly --standalone -d your_domain.com&lt;/code&gt;&lt;br&gt;&lt;code&gt;sudo service nginx start&lt;/code&gt;&lt;br&gt;==将your_domain.com改为自己的域名。==&lt;/p&gt;
+&lt;h4 id=&quot;LetsEncrypt篇&quot;&gt;&lt;a href=&quot;#LetsEncrypt篇&quot; class=&quot;headerlink&quot; title=&quot;LetsEncrypt篇&quot;&gt;&lt;/a&gt;LetsEncrypt篇&lt;/h4&gt;&lt;p&gt;&lt;code&gt;git clone https://github.com/letsencrypt/letsencrypt&lt;/code&gt;&lt;br&gt;&lt;code&gt;cd letsencrypt&lt;/code&gt;&lt;br&gt;&lt;code&gt;sudo service nginx stop&lt;/code&gt;&lt;br&gt;&lt;code&gt;./letsencrypt-auto certonly --standalone -d your_domain.com&lt;/code&gt;&lt;br&gt;&lt;code&gt;sudo service nginx start&lt;/code&gt;&lt;br&gt;==将your_domain.com改为自己的域名。==&lt;/p&gt;
     
     </summary>
     
@@ -98,11 +127,11 @@ server {
       <category term="博客" scheme="http://yanlongchn.com/categories/Program/Blog/"/>
     
     
-      <category term="LetsEncrypt" scheme="http://yanlongchn.com/tags/LetsEncrypt/"/>
-    
       <category term="Ghost" scheme="http://yanlongchn.com/tags/Ghost/"/>
     
       <category term="CentOS" scheme="http://yanlongchn.com/tags/CentOS/"/>
+    
+      <category term="LetsEncrypt" scheme="http://yanlongchn.com/tags/LetsEncrypt/"/>
     
   </entry>
   
@@ -111,7 +140,7 @@ server {
     <link href="http://yanlongchn.com/2016/11/15/centos6.5,32bit,ghostblog%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     <id>http://yanlongchn.com/2016/11/15/centos6.5,32bit,ghostblog安装教程/</id>
     <published>2016-11-15T05:21:50.476Z</published>
-    <updated>2016-11-16T04:24:44.401Z</updated>
+    <updated>2016-11-17T06:36:26.102Z</updated>
     
     <content type="html"><![CDATA[<h4 id="基本环境："><a href="#基本环境：" class="headerlink" title="基本环境："></a>基本环境：</h4><ol>
 <li>服务器：BANDWAGON,10G,512M,CENTOS6.5;</li>
@@ -190,8 +219,7 @@ collation-server=utf8_general_ci
             port: &apos;2368&apos;
         }
     }
-</code></pre><p>####SS</p>
-<blockquote>
+</code></pre><h4 id="SS"><a href="#SS" class="headerlink" title="SS"></a>SS</h4><blockquote>
 <p>shadowsocks</p>
 </blockquote>
 <p><code>wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</code></p>
@@ -288,15 +316,15 @@ net.ipv4.tcp_mtu_probing = 1
     <link href="http://yanlongchn.com/2016/11/14/%E8%AF%81%E4%B9%A6%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E4%BB%BB%E5%8A%A1/"/>
     <id>http://yanlongchn.com/2016/11/14/证书自动更新任务/</id>
     <published>2016-11-14T11:10:21.000Z</published>
-    <updated>2016-11-16T04:25:12.601Z</updated>
+    <updated>2016-11-17T06:36:51.427Z</updated>
     
-    <content type="html"><![CDATA[<p>#####增加crontab自动任务<br><code>crontab -l</code><br><code>crontab -e</code><br><code>30 15 13 * * ./certbot-auto renew</code><br><code>15 4 * * * pm2 restart ghost</code><br><code>:wq!</code><br><a id="more"></a></p>
-<p>#####Python2.6 升级2.7.8<br><code>wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz</code><br><code>tar -xvf Python-2.7.8.tgz</code><br><code>cd Python-2.7.8</code><br><code>./configure --prefix=/usr/local/python2.7</code><br><code>make</code><br><code>make install</code><br>==创建链接来使系统默认python变为python2.7==<br>·mv /usr/bin/python /usr/bin/python2.6.9<br><code>ln -fs /usr/local/python2.7/bin/python2.7 /usr/bin/python</code><br>==修改yum配置(否则yum无法正常运行)==<br><code>vi /usr/bin/yum</code><br>==将第一行的#!/usr/bin/python修改为系统原有的python版本地址#!/usr/bin/python2.6.9==<br>==至此CentOS6.3系统Python已成功升级至2.7.6版本。==</p>
+    <content type="html"><![CDATA[<h5 id="增加crontab自动任务"><a href="#增加crontab自动任务" class="headerlink" title="增加crontab自动任务"></a>增加crontab自动任务</h5><p><code>crontab -l</code><br><code>crontab -e</code><br><code>30 15 13 * * ./certbot-auto renew</code><br><code>15 4 * * * pm2 restart ghost</code><br><code>:wq!</code><br><a id="more"></a></p>
+<h5 id="Python2-6-升级2-7-8"><a href="#Python2-6-升级2-7-8" class="headerlink" title="Python2.6 升级2.7.8"></a>Python2.6 升级2.7.8</h5><p><code>wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz</code><br><code>tar -xvf Python-2.7.8.tgz</code><br><code>cd Python-2.7.8</code><br><code>./configure --prefix=/usr/local/python2.7</code><br><code>make</code><br><code>make install</code><br>==创建链接来使系统默认python变为python2.7==<br>·mv /usr/bin/python /usr/bin/python2.6.9<br><code>ln -fs /usr/local/python2.7/bin/python2.7 /usr/bin/python</code><br>==修改yum配置(否则yum无法正常运行)==<br><code>vi /usr/bin/yum</code><br>==将第一行的#!/usr/bin/python修改为系统原有的python版本地址#!/usr/bin/python2.6.9==<br>==至此CentOS6.3系统Python已成功升级至2.7.6版本。==</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;#####增加crontab自动任务&lt;br&gt;&lt;code&gt;crontab -l&lt;/code&gt;&lt;br&gt;&lt;code&gt;crontab -e&lt;/code&gt;&lt;br&gt;&lt;code&gt;30 15 13 * * ./certbot-auto renew&lt;/code&gt;&lt;br&gt;&lt;code&gt;15 4 * * * pm2 restart ghost&lt;/code&gt;&lt;br&gt;&lt;code&gt;:wq!&lt;/code&gt;&lt;br&gt;
+      &lt;h5 id=&quot;增加crontab自动任务&quot;&gt;&lt;a href=&quot;#增加crontab自动任务&quot; class=&quot;headerlink&quot; title=&quot;增加crontab自动任务&quot;&gt;&lt;/a&gt;增加crontab自动任务&lt;/h5&gt;&lt;p&gt;&lt;code&gt;crontab -l&lt;/code&gt;&lt;br&gt;&lt;code&gt;crontab -e&lt;/code&gt;&lt;br&gt;&lt;code&gt;30 15 13 * * ./certbot-auto renew&lt;/code&gt;&lt;br&gt;&lt;code&gt;15 4 * * * pm2 restart ghost&lt;/code&gt;&lt;br&gt;&lt;code&gt;:wq!&lt;/code&gt;&lt;br&gt;
     
     </summary>
     
@@ -305,11 +333,11 @@ net.ipv4.tcp_mtu_probing = 1
       <category term="博客" scheme="http://yanlongchn.com/categories/Program/Blog/"/>
     
     
-      <category term="LetsEncrypt" scheme="http://yanlongchn.com/tags/LetsEncrypt/"/>
-    
       <category term="Ghost" scheme="http://yanlongchn.com/tags/Ghost/"/>
     
       <category term="CentOS" scheme="http://yanlongchn.com/tags/CentOS/"/>
+    
+      <category term="LetsEncrypt" scheme="http://yanlongchn.com/tags/LetsEncrypt/"/>
     
   </entry>
   

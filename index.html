@@ -156,11 +156,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                4
+                5
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                5
+                7
                 <span>标签</span>
             </div>
         </div>
@@ -215,6 +215,149 @@
 
             
             <section id="main">
+    <article id="post-如何用SPSS和Clementine处理缺失值、离群值、极值？" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/" itemprop="url">
+            <img src="/images/spss.png" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/">如何用SPSS和Clementine处理缺失值、离群值、极值？</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/">
+            <time datetime="2016-11-17T06:00:20.000Z" itemprop="datePublished">2016-11-17</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Date/">数据</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Date/Spss/">SPSS</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Clementine/">Clementine</a>, <a class="tag-link" href="/tags/categories-spss/">SPSS</a>, <a class="tag-link" href="/tags/数据分析/">数据分析</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h4 id="一、什么是预处理、预分析？"><a href="#一、什么是预处理、预分析？" class="headerlink" title="一、什么是预处理、预分析？"></a>一、什么是预处理、预分析？</h4><p>高质量数据是数据分析的前提和分析结论可靠性的保障。尽管在获取数据源时数据分析师格外谨慎，耗费大量的时间，但数据质量仍然需持续关注。不管是一手还是二手数据源，总是会存在一些质量问题。同时，为了满足数据分析、挖掘的实际需要，对噪声数据如何处理，是丢弃还是补充，或者重新计算新的数据变量，这些不是随意决定的，这就是数据预处理的一个过程，是在数据分析、挖掘开始前对数据源的审核和判断，是数据分析必不可少的一项。本文暂只简单讨论一下缺失值、异常值的处理。</p></p>
+            <p class="article-more-link">
+                <a href="/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/#more">查看更多</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yanlongchn.com/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/" data-id="civlyaciy0001p0vheu8hbydh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yanlongchn.com/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yanlongchn.com/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-入门级扫盲贴" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -280,7 +423,7 @@
 
 </div>
 
-    <a data-url="http://yanlongchn.com/2016/11/15/入门级扫盲贴/" data-id="civkfcx0c0007igvhkn8fhdzq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yanlongchn.com/2016/11/15/入门级扫盲贴/" data-id="civlyacko000dp0vh00asqq1x" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -411,7 +554,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             <p><p><strong>CentOS</strong><br>LetsEncrypt域名加SSL</p>
-<p>####LetsEncrypt篇<br><code>git clone https://github.com/letsencrypt/letsencrypt</code><br><code>cd letsencrypt</code><br><code>sudo service nginx stop</code><br><code>./letsencrypt-auto certonly --standalone -d your_domain.com</code><br><code>sudo service nginx start</code><br>==将your_domain.com改为自己的域名。==</p></p>
+<h4 id="LetsEncrypt篇"><a href="#LetsEncrypt篇" class="headerlink" title="LetsEncrypt篇"></a>LetsEncrypt篇</h4><p><code>git clone https://github.com/letsencrypt/letsencrypt</code><br><code>cd letsencrypt</code><br><code>sudo service nginx stop</code><br><code>./letsencrypt-auto certonly --standalone -d your_domain.com</code><br><code>sudo service nginx start</code><br>==将your_domain.com改为自己的域名。==</p></p>
             <p class="article-more-link">
                 <a href="/2016/11/15/LetsEncrypt域名加SSL/#more">查看更多</a>
             </p>
@@ -424,7 +567,7 @@
 
 </div>
 
-    <a data-url="http://yanlongchn.com/2016/11/15/LetsEncrypt域名加SSL/" data-id="civkfcwzp0001igvhgdcq0g44" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yanlongchn.com/2016/11/15/LetsEncrypt域名加SSL/" data-id="civlyacl3000lp0vhxytaavht" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -570,7 +713,7 @@
 
 </div>
 
-    <a data-url="http://yanlongchn.com/2016/11/15/centos6.5,32bit,ghostblog安装教程/" data-id="civkfcx010003igvhc2i4svzk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yanlongchn.com/2016/11/15/centos6.5,32bit,ghostblog安装教程/" data-id="civlyacl3000fp0vh128wmuvp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -700,7 +843,7 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><p>#####增加crontab自动任务<br><code>crontab -l</code><br><code>crontab -e</code><br><code>30 15 13 * * ./certbot-auto renew</code><br><code>15 4 * * * pm2 restart ghost</code><br><code>:wq!</code><br></p>
+            <p><h5 id="增加crontab自动任务"><a href="#增加crontab自动任务" class="headerlink" title="增加crontab自动任务"></a>增加crontab自动任务</h5><p><code>crontab -l</code><br><code>crontab -e</code><br><code>30 15 13 * * ./certbot-auto renew</code><br><code>15 4 * * * pm2 restart ghost</code><br><code>:wq!</code><br></p>
             <p class="article-more-link">
                 <a href="/2016/11/14/证书自动更新任务/#more">查看更多</a>
             </p>
@@ -713,7 +856,7 @@
 
 </div>
 
-    <a data-url="http://yanlongchn.com/2016/11/14/证书自动更新任务/" data-id="civkfcx0n0009igvhjmmsx3q7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yanlongchn.com/2016/11/14/证书自动更新任务/" data-id="civlyacl3000ip0vh4vpjbjgs" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -803,6 +946,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/spss.png)" alt="如何用SPSS和Clementine处理缺失值、离群值、极值？" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Date/">数据</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Date/Spss/">SPSS</a></p>
+                            <p class="item-title"><a href="/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/" class="title">如何用SPSS和Clementine处理缺失值、离群值、极值？</a></p>
+                            <p class="item-date"><time datetime="2016-11-17T06:00:20.000Z" itemprop="datePublished">2016-11-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2016/11/15/入门级扫盲贴/" class="thumbnail">
     
     
@@ -885,7 +1047,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Date/">数据</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Program/">编程</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Program/Blog/">博客</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Date/">数据</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Date/Spss/">SPSS</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Program/">编程</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Program/Blog/">博客</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -894,7 +1056,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">4</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">5</span></li></ul>
         </div>
     </div>
 
@@ -903,7 +1065,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/">CentOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataAnalysis/">DataAnalysis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ghost/">Ghost</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LetsEncrypt/">LetsEncrypt</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分析/">数据分析</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/">CentOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Clementine/">Clementine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataAnalysis/">DataAnalysis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ghost/">Ghost</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LetsEncrypt/">LetsEncrypt</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/categories-spss/">SPSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分析/">数据分析</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -912,7 +1074,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/CentOS/" style="font-size: 20px;">CentOS</a> <a href="/tags/DataAnalysis/" style="font-size: 10px;">DataAnalysis</a> <a href="/tags/Ghost/" style="font-size: 20px;">Ghost</a> <a href="/tags/LetsEncrypt/" style="font-size: 15px;">LetsEncrypt</a> <a href="/tags/数据分析/" style="font-size: 10px;">数据分析</a>
+            <a href="/tags/CentOS/" style="font-size: 20px;">CentOS</a> <a href="/tags/Clementine/" style="font-size: 10px;">Clementine</a> <a href="/tags/DataAnalysis/" style="font-size: 10px;">DataAnalysis</a> <a href="/tags/Ghost/" style="font-size: 20px;">Ghost</a> <a href="/tags/LetsEncrypt/" style="font-size: 15px;">LetsEncrypt</a> <a href="/tags/categories-spss/" style="font-size: 10px;">SPSS</a> <a href="/tags/数据分析/" style="font-size: 15px;">数据分析</a>
         </div>
     </div>
 
