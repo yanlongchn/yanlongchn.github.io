@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yanlongchn.com/"/>
-  <updated>2016-11-17T09:00:12.160Z</updated>
+  <updated>2016-11-21T04:59:52.601Z</updated>
   <id>http://yanlongchn.com/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>R-RSTUDIO-RATTLE-SAMPLE</title>
+    <link href="http://yanlongchn.com/2016/11/21/R-RSTUDIO-RATTLE-SAMPLE/"/>
+    <id>http://yanlongchn.com/2016/11/21/R-RSTUDIO-RATTLE-SAMPLE/</id>
+    <published>2016-11-21T04:53:00.000Z</published>
+    <updated>2016-11-21T04:59:52.601Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="R安装"><a href="#R安装" class="headerlink" title="R安装"></a>R安装</h4><p>&emsp;&emsp;</p>
+<h4 id="R基础环境配置"><a href="#R基础环境配置" class="headerlink" title="R基础环境配置"></a>R基础环境配置</h4><p>install.package(“RGtk2”)<br>install.package(“rattle”)<br>install.package(“caret”)<br><a id="more"></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;R安装&quot;&gt;&lt;a href=&quot;#R安装&quot; class=&quot;headerlink&quot; title=&quot;R安装&quot;&gt;&lt;/a&gt;R安装&lt;/h4&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;/p&gt;
+&lt;h4 id=&quot;R基础环境配置&quot;&gt;&lt;a href=&quot;#R基础环境配置&quot; class=&quot;headerlink&quot; title=&quot;R基础环境配置&quot;&gt;&lt;/a&gt;R基础环境配置&lt;/h4&gt;&lt;p&gt;install.package(“RGtk2”)&lt;br&gt;install.package(“rattle”)&lt;br&gt;install.package(“caret”)&lt;br&gt;
+    
+    </summary>
+    
+      <category term="数据" scheme="http://yanlongchn.com/categories/Date/"/>
+    
+    
+      <category term="数据分析" scheme="http://yanlongchn.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="R" scheme="http://yanlongchn.com/tags/R/"/>
+    
+      <category term="RSTUDIO" scheme="http://yanlongchn.com/tags/RSTUDIO/"/>
+    
+      <category term="RATTLE" scheme="http://yanlongchn.com/tags/RATTLE/"/>
+    
+  </entry>
   
   <entry>
     <title>如何用SPSS和Clementine处理缺失值、离群值、极值？</title>
