@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>CHN-NO.9527 on Github</title>
+  <title>CPDA@github</title>
   <subtitle>Thoughts, stories and ideas.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yanlongchn.com/"/>
-  <updated>2016-11-21T04:59:52.601Z</updated>
-  <id>http://yanlongchn.com/</id>
+  <link href="https://yanlongchn.github.io/"/>
+  <updated>2016-11-22T07:58:28.384Z</updated>
+  <id>https://yanlongchn.github.io/</id>
   
   <author>
     <name>NO.9527</name>
@@ -17,39 +17,125 @@
   
   <entry>
     <title>R-RSTUDIO-RATTLE-SAMPLE</title>
-    <link href="http://yanlongchn.com/2016/11/21/R-RSTUDIO-RATTLE-SAMPLE/"/>
-    <id>http://yanlongchn.com/2016/11/21/R-RSTUDIO-RATTLE-SAMPLE/</id>
+    <link href="https://yanlongchn.github.io/2016/11/21/R-RSTUDIO-RATTLE-SAMPLE/"/>
+    <id>https://yanlongchn.github.io/2016/11/21/R-RSTUDIO-RATTLE-SAMPLE/</id>
     <published>2016-11-21T04:53:00.000Z</published>
-    <updated>2016-11-21T04:59:52.601Z</updated>
+    <updated>2016-11-22T07:58:28.384Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="R安装"><a href="#R安装" class="headerlink" title="R安装"></a>R安装</h4><p>&emsp;&emsp;</p>
-<h4 id="R基础环境配置"><a href="#R基础环境配置" class="headerlink" title="R基础环境配置"></a>R基础环境配置</h4><p>install.package(“RGtk2”)<br>install.package(“rattle”)<br>install.package(“caret”)<br><a id="more"></a></p>
-]]></content>
+    <content type="html"><![CDATA[<h4 id="R安装"><a href="#R安装" class="headerlink" title="R安装"></a>R安装</h4><ol>
+<li>R安装包下载地址：<a href="https://mirrors.tuna.tsinghua.edu.cn/CRAN/index.html" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/CRAN/index.html</a>  </li>
+<li>R函数包下载地址：<a href="https://mirrors.tuna.tsinghua.edu.cn/CRAN/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/CRAN/</a>  </li>
+<li>RSTUDIO下载地址：<a href="https://www.rstudio.com/products/rstudio/download/" target="_blank" rel="external">https://www.rstudio.com/products/rstudio/download/</a>  </li>
+</ol>
+<h4 id="R基础环境配置"><a href="#R基础环境配置" class="headerlink" title="R基础环境配置"></a>R基础环境配置</h4><p><code>&gt; install.package(&quot;RGtk2&quot;)</code><br><code>&gt; install.package(&quot;rattle&quot;)</code><br><code>&gt; install.package(&quot;caret&quot;)</code>  </p>
+<a id="more"></a>
+<h4 id="sample函数"><a href="#sample函数" class="headerlink" title="sample函数"></a>sample函数</h4><h6 id="随机抽"><a href="#随机抽" class="headerlink" title="随机抽"></a>随机抽</h6><p>引入一个随机种子<br><code>&gt; set.seed(1234)</code><br>创建对象x，由1~10组成<br><code>&gt; x &lt;- seq(1,10);x</code><br>        [1]  1  2  3  4  5  6  7  8  9 10<br>利用sample进行无放回抽样<br><code>&gt; a &lt;-sample(x,5,replace = FALSE);a</code><br>        [1] 2 6 5 8 9<br>利用sample进行有放回抽样<br><code>&gt; a &lt;-sample(x,5,replace = TRUE);a</code><br>        [1] 7 1 3 7 6<br>利用sample进行有放回抽样<br><code>&gt; a &lt;-sample(x,8,replace = TRUE);a</code><br>        [1]  7  6  3 10  3  9  3  3<br>利用sample进行无放回抽样<br><code>&gt; a &lt;-sample(x,8,replace = FALSE);a</code><br>        [1] 2 3 9 8 1 6 5 7  </p>
+<h6 id="等比抽"><a href="#等比抽" class="headerlink" title="等比抽"></a>等比抽</h6><p><code>&gt; rate &lt;- sum(user$是否付费==0)/nrow(user)</code><br><code>&gt; d &lt;- 1:nrow(user)</code><br><code>&gt; index1 &lt;- sample(d[user$是否付费==0],10000*rate)</code><br><code>&gt; index2 &lt;- sample(d[user$是否付费==1],10000*(1-rate))</code><br><code>&gt; user_sample1 &lt;- user[c(index1,index2),]</code>  </p>
+<h4 id="createDataPartition函数"><a href="#createDataPartition函数" class="headerlink" title="createDataPartition函数"></a>createDataPartition函数</h4><p><code>&gt; library(&quot;caret&quot;)</code><br><code>&gt; iris &lt;- read_csv(&quot;F:/SPSS/sample/iris.csv&quot;)</code><br><code>&gt; splitindex &lt;- createDataPartition(iris$Species,times=1,p=0.1,list = FALSE)</code><br><code>&gt; splitindex</code>  </p>
+<pre><code>      Resample1
+ [1,]         3
+ [2,]        13
+ [3,]        15
+ [4,]        22
+ [5,]        42
+ [6,]        59
+ [7,]        60
+ [8,]        62
+ [9,]        76
+[10,]        87
+[11,]       115
+[12,]       127
+[13,]       131
+[14,]       140
+[15,]       150  
+</code></pre><p><code>&gt; sample &lt;- iris[splitindex,]</code><br><code>&gt; table(sample$Species);</code>  </p>
+<pre><code>setosa versicolor  virginica 
+ 5          5          5 
+</code></pre><p><code>&gt; prop.table(table(sample$Species))</code>  </p>
+<pre><code>setosa versicolor  virginica 
+ 0.3333333  0.3333333  0.333333  
+</code></pre><h4 id="数据哑变量处理-虚拟化处理dummyVars"><a href="#数据哑变量处理-虚拟化处理dummyVars" class="headerlink" title="数据哑变量处理(虚拟化处理dummyVars)"></a>数据哑变量处理(虚拟化处理dummyVars)</h4><p><code>&gt; head(iris)</code>  </p>
+<pre><code>A   B   C   D Species
+1 5.1 3.5 1.4 0.2  setosa
+2 4.9 3.0 1.4 0.2  setosa
+3 4.7 3.2 1.3 0.2  setosa
+4 4.6 3.1 1.5 0.2  setosa
+5 5.0 3.6 1.4 0.2  setosa
+6 5.4 3.9 1.7 0.4  setosa  
+</code></pre><p><code>&gt; colnames(iris)</code>  </p>
+<pre><code>[1] &quot;A&quot;       &quot;B&quot;       &quot;C&quot;       &quot;D&quot;       &quot;Species&quot;  
+</code></pre><p><code>&gt; fit &lt;- lm(A~.,data = iris)</code><br><code>&gt; summary(fit)</code>  </p>
+<pre><code>Call:
+lm(formula = A ~ ., data = iris)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.79411 -0.22421  0.00549  0.20443  0.73305 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        2.15858    0.27939   7.726 1.73e-12 ***
+B                  0.50107    0.08615   5.816 3.73e-08 ***
+C                  0.82879    0.06829  12.136  &lt; 2e-16 ***
+D                 -0.32210    0.15128  -2.129  0.03494 *  
+Speciesversicolor -0.71408    0.24015  -2.974  0.00345 ** 
+Speciesvirginica  -1.00962    0.33404  -3.022  0.00297 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3064 on 144 degrees of freedom
+Multiple R-squared:  0.8677,    Adjusted R-squared:  0.8631 
+F-statistic: 188.8 on 5 and 144 DF,  p-value: &lt; 2.2e-16  
+</code></pre><p><code>&gt; str(iris)</code>  </p>
+<pre><code>Classes ‘tbl_df’, ‘tbl’ and &apos;data.frame&apos;:    150 obs. of  5 variables:
+ $ A      : num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+ $ B      : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+ $ C      : num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+ $ D      : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+ $ Species: chr  &quot;setosa&quot; &quot;setosa&quot; &quot;setosa&quot; &quot;setosa&quot; ...  
+</code></pre><p>dummyVars用法<br><code>dummyVars(formula,data,sep=&quot;.&quot;,levelsOnly=FALSE,fullRank=FALSE,…)</code><br><code>&gt; dmy &lt;- dummyVars(~.,data = iris,sep = &quot;-&quot;)</code><br><code>&gt; trsf &lt;- data.frame(predict(dmy,newdata=iris))</code><br><code>&gt; trsf</code>  </p>
+<pre><code>    A   B   C   D Speciessetosa Speciesversicolor Speciesvirginica
+1   5.1 3.5 1.4 0.2             1                 0                0
+2   4.9 3.0 1.4 0.2             1                 0                0
+3   4.7 3.2 1.3 0.2             1                 0                0
+4   4.6 3.1 1.5 0.2             1                 0                0
+5   5.0 3.6 1.4 0.2             1                 0                0
+6   5.4 3.9 1.7 0.4             1                 0                0
+7   4.6 3.4 1.4 0.3             1                 0                0
+8   5.0 3.4 1.5 0.2             1                 0                0
+9   4.4 2.9 1.4 0.2             1                 0                0
+10  4.9 3.1 1.5 0.1             1                 0                0
+ [ reached getOption(&quot;max.print&quot;) -- omitted 140 rows ]
+</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;R安装&quot;&gt;&lt;a href=&quot;#R安装&quot; class=&quot;headerlink&quot; title=&quot;R安装&quot;&gt;&lt;/a&gt;R安装&lt;/h4&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;/p&gt;
-&lt;h4 id=&quot;R基础环境配置&quot;&gt;&lt;a href=&quot;#R基础环境配置&quot; class=&quot;headerlink&quot; title=&quot;R基础环境配置&quot;&gt;&lt;/a&gt;R基础环境配置&lt;/h4&gt;&lt;p&gt;install.package(“RGtk2”)&lt;br&gt;install.package(“rattle”)&lt;br&gt;install.package(“caret”)&lt;br&gt;
+      &lt;h4 id=&quot;R安装&quot;&gt;&lt;a href=&quot;#R安装&quot; class=&quot;headerlink&quot; title=&quot;R安装&quot;&gt;&lt;/a&gt;R安装&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;R安装包下载地址：&lt;a href=&quot;https://mirrors.tuna.tsinghua.edu.cn/CRAN/index.html&quot;&gt;https://mirrors.tuna.tsinghua.edu.cn/CRAN/index.html&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;R函数包下载地址：&lt;a href=&quot;https://mirrors.tuna.tsinghua.edu.cn/CRAN/&quot;&gt;https://mirrors.tuna.tsinghua.edu.cn/CRAN/&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;RSTUDIO下载地址：&lt;a href=&quot;https://www.rstudio.com/products/rstudio/download/&quot;&gt;https://www.rstudio.com/products/rstudio/download/&lt;/a&gt;  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;R基础环境配置&quot;&gt;&lt;a href=&quot;#R基础环境配置&quot; class=&quot;headerlink&quot; title=&quot;R基础环境配置&quot;&gt;&lt;/a&gt;R基础环境配置&lt;/h4&gt;&lt;p&gt;&lt;code&gt;&amp;gt; install.package(&amp;quot;RGtk2&amp;quot;)&lt;/code&gt;&lt;br&gt;&lt;code&gt;&amp;gt; install.package(&amp;quot;rattle&amp;quot;)&lt;/code&gt;&lt;br&gt;&lt;code&gt;&amp;gt; install.package(&amp;quot;caret&amp;quot;)&lt;/code&gt;  &lt;/p&gt;
     
     </summary>
     
-      <category term="数据" scheme="http://yanlongchn.com/categories/Date/"/>
+      <category term="数据" scheme="https://yanlongchn.github.io/categories/Date/"/>
     
     
-      <category term="数据分析" scheme="http://yanlongchn.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+      <category term="数据分析" scheme="https://yanlongchn.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
-      <category term="R" scheme="http://yanlongchn.com/tags/R/"/>
+      <category term="R" scheme="https://yanlongchn.github.io/tags/R/"/>
     
-      <category term="RSTUDIO" scheme="http://yanlongchn.com/tags/RSTUDIO/"/>
+      <category term="RSTUDIO" scheme="https://yanlongchn.github.io/tags/RSTUDIO/"/>
     
-      <category term="RATTLE" scheme="http://yanlongchn.com/tags/RATTLE/"/>
+      <category term="RATTLE" scheme="https://yanlongchn.github.io/tags/RATTLE/"/>
     
   </entry>
   
   <entry>
     <title>如何用SPSS和Clementine处理缺失值、离群值、极值？</title>
-    <link href="http://yanlongchn.com/2016/11/17/%E5%A6%82%E4%BD%95%E7%94%A8SPSS%E5%92%8CClementine%E5%A4%84%E7%90%86%E7%BC%BA%E5%A4%B1%E5%80%BC%E3%80%81%E7%A6%BB%E7%BE%A4%E5%80%BC%E3%80%81%E6%9E%81%E5%80%BC%EF%BC%9F/"/>
-    <id>http://yanlongchn.com/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/</id>
+    <link href="https://yanlongchn.github.io/2016/11/17/%E5%A6%82%E4%BD%95%E7%94%A8SPSS%E5%92%8CClementine%E5%A4%84%E7%90%86%E7%BC%BA%E5%A4%B1%E5%80%BC%E3%80%81%E7%A6%BB%E7%BE%A4%E5%80%BC%E3%80%81%E6%9E%81%E5%80%BC%EF%BC%9F/"/>
+    <id>https://yanlongchn.github.io/2016/11/17/如何用SPSS和Clementine处理缺失值、离群值、极值？/</id>
     <published>2016-11-17T06:00:20.000Z</published>
     <updated>2016-11-17T09:00:12.160Z</updated>
     
@@ -66,23 +152,23 @@
     
     </summary>
     
-      <category term="数据" scheme="http://yanlongchn.com/categories/Date/"/>
+      <category term="数据" scheme="https://yanlongchn.github.io/categories/Date/"/>
     
-      <category term="SPSS" scheme="http://yanlongchn.com/categories/Date/Spss/"/>
+      <category term="SPSS" scheme="https://yanlongchn.github.io/categories/Date/Spss/"/>
     
     
-      <category term="数据分析" scheme="http://yanlongchn.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+      <category term="数据分析" scheme="https://yanlongchn.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
-      <category term="SPSS" scheme="http://yanlongchn.com/tags/categories-spss/"/>
+      <category term="SPSS" scheme="https://yanlongchn.github.io/tags/categories-spss/"/>
     
-      <category term="Clementine" scheme="http://yanlongchn.com/tags/Clementine/"/>
+      <category term="Clementine" scheme="https://yanlongchn.github.io/tags/Clementine/"/>
     
   </entry>
   
   <entry>
     <title>入门级扫盲贴</title>
-    <link href="http://yanlongchn.com/2016/11/15/%E5%85%A5%E9%97%A8%E7%BA%A7%E6%89%AB%E7%9B%B2%E8%B4%B4/"/>
-    <id>http://yanlongchn.com/2016/11/15/入门级扫盲贴/</id>
+    <link href="https://yanlongchn.github.io/2016/11/15/%E5%85%A5%E9%97%A8%E7%BA%A7%E6%89%AB%E7%9B%B2%E8%B4%B4/"/>
+    <id>https://yanlongchn.github.io/2016/11/15/入门级扫盲贴/</id>
     <published>2016-11-15T05:21:50.481Z</published>
     <updated>2016-11-16T04:25:12.548Z</updated>
     
@@ -98,19 +184,19 @@
     
     </summary>
     
-      <category term="数据" scheme="http://yanlongchn.com/categories/Date/"/>
+      <category term="数据" scheme="https://yanlongchn.github.io/categories/Date/"/>
     
     
-      <category term="数据分析" scheme="http://yanlongchn.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+      <category term="数据分析" scheme="https://yanlongchn.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
-      <category term="DataAnalysis" scheme="http://yanlongchn.com/tags/DataAnalysis/"/>
+      <category term="DataAnalysis" scheme="https://yanlongchn.github.io/tags/DataAnalysis/"/>
     
   </entry>
   
   <entry>
     <title>LetsEncrypt域名加SSL</title>
-    <link href="http://yanlongchn.com/2016/11/15/LetsEncrypt%E5%9F%9F%E5%90%8D%E5%8A%A0SSL/"/>
-    <id>http://yanlongchn.com/2016/11/15/LetsEncrypt域名加SSL/</id>
+    <link href="https://yanlongchn.github.io/2016/11/15/LetsEncrypt%E5%9F%9F%E5%90%8D%E5%8A%A0SSL/"/>
+    <id>https://yanlongchn.github.io/2016/11/15/LetsEncrypt域名加SSL/</id>
     <published>2016-11-15T05:21:50.478Z</published>
     <updated>2016-11-17T06:36:51.405Z</updated>
     
@@ -157,23 +243,23 @@ server {
     
     </summary>
     
-      <category term="编程" scheme="http://yanlongchn.com/categories/Program/"/>
+      <category term="编程" scheme="https://yanlongchn.github.io/categories/Program/"/>
     
-      <category term="博客" scheme="http://yanlongchn.com/categories/Program/Blog/"/>
+      <category term="博客" scheme="https://yanlongchn.github.io/categories/Program/Blog/"/>
     
     
-      <category term="LetsEncrypt" scheme="http://yanlongchn.com/tags/LetsEncrypt/"/>
+      <category term="Ghost" scheme="https://yanlongchn.github.io/tags/Ghost/"/>
     
-      <category term="Ghost" scheme="http://yanlongchn.com/tags/Ghost/"/>
+      <category term="CentOS" scheme="https://yanlongchn.github.io/tags/CentOS/"/>
     
-      <category term="CentOS" scheme="http://yanlongchn.com/tags/CentOS/"/>
+      <category term="LetsEncrypt" scheme="https://yanlongchn.github.io/tags/LetsEncrypt/"/>
     
   </entry>
   
   <entry>
     <title>centos6.5,32bit,ghostblog安装教程</title>
-    <link href="http://yanlongchn.com/2016/11/15/centos6.5,32bit,ghostblog%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    <id>http://yanlongchn.com/2016/11/15/centos6.5,32bit,ghostblog安装教程/</id>
+    <link href="https://yanlongchn.github.io/2016/11/15/centos6.5,32bit,ghostblog%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <id>https://yanlongchn.github.io/2016/11/15/centos6.5,32bit,ghostblog安装教程/</id>
     <published>2016-11-15T05:21:50.476Z</published>
     <updated>2016-11-17T06:36:26.102Z</updated>
     
@@ -335,21 +421,21 @@ net.ipv4.tcp_mtu_probing = 1
     
     </summary>
     
-      <category term="编程" scheme="http://yanlongchn.com/categories/Program/"/>
+      <category term="编程" scheme="https://yanlongchn.github.io/categories/Program/"/>
     
-      <category term="博客" scheme="http://yanlongchn.com/categories/Program/Blog/"/>
+      <category term="博客" scheme="https://yanlongchn.github.io/categories/Program/Blog/"/>
     
     
-      <category term="Ghost" scheme="http://yanlongchn.com/tags/Ghost/"/>
+      <category term="Ghost" scheme="https://yanlongchn.github.io/tags/Ghost/"/>
     
-      <category term="CentOS" scheme="http://yanlongchn.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="https://yanlongchn.github.io/tags/CentOS/"/>
     
   </entry>
   
   <entry>
     <title>证书自动更新任务</title>
-    <link href="http://yanlongchn.com/2016/11/14/%E8%AF%81%E4%B9%A6%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E4%BB%BB%E5%8A%A1/"/>
-    <id>http://yanlongchn.com/2016/11/14/证书自动更新任务/</id>
+    <link href="https://yanlongchn.github.io/2016/11/14/%E8%AF%81%E4%B9%A6%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E4%BB%BB%E5%8A%A1/"/>
+    <id>https://yanlongchn.github.io/2016/11/14/证书自动更新任务/</id>
     <published>2016-11-14T11:10:21.000Z</published>
     <updated>2016-11-17T06:36:51.427Z</updated>
     
@@ -363,16 +449,16 @@ net.ipv4.tcp_mtu_probing = 1
     
     </summary>
     
-      <category term="编程" scheme="http://yanlongchn.com/categories/Program/"/>
+      <category term="编程" scheme="https://yanlongchn.github.io/categories/Program/"/>
     
-      <category term="博客" scheme="http://yanlongchn.com/categories/Program/Blog/"/>
+      <category term="博客" scheme="https://yanlongchn.github.io/categories/Program/Blog/"/>
     
     
-      <category term="LetsEncrypt" scheme="http://yanlongchn.com/tags/LetsEncrypt/"/>
+      <category term="Ghost" scheme="https://yanlongchn.github.io/tags/Ghost/"/>
     
-      <category term="Ghost" scheme="http://yanlongchn.com/tags/Ghost/"/>
+      <category term="CentOS" scheme="https://yanlongchn.github.io/tags/CentOS/"/>
     
-      <category term="CentOS" scheme="http://yanlongchn.com/tags/CentOS/"/>
+      <category term="LetsEncrypt" scheme="https://yanlongchn.github.io/tags/LetsEncrypt/"/>
     
   </entry>
   
