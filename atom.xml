@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yanlongchn.github.io/"/>
-  <updated>2016-11-22T07:58:28.384Z</updated>
+  <updated>2016-11-23T01:05:42.979Z</updated>
   <id>https://yanlongchn.github.io/</id>
   
   <author>
@@ -16,11 +16,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CPDA第二日</title>
+    <link href="https://yanlongchn.github.io/2016/11/23/CPDA%E7%AC%AC%E4%BA%8C%E6%97%A5/"/>
+    <id>https://yanlongchn.github.io/2016/11/23/CPDA第二日/</id>
+    <published>2016-11-23T00:45:27.000Z</published>
+    <updated>2016-11-23T01:05:42.979Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;</p>
+<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="1" scheme="https://yanlongchn.github.io/categories/1/"/>
+    
+      <category term="2" scheme="https://yanlongchn.github.io/categories/1/2/"/>
+    
+    
+      <category term="1" scheme="https://yanlongchn.github.io/tags/1/"/>
+    
+      <category term="2" scheme="https://yanlongchn.github.io/tags/2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>R-RSTUDIO-RATTLE-SAMPLE</title>
     <link href="https://yanlongchn.github.io/2016/11/21/R-RSTUDIO-RATTLE-SAMPLE/"/>
     <id>https://yanlongchn.github.io/2016/11/21/R-RSTUDIO-RATTLE-SAMPLE/</id>
     <published>2016-11-21T04:53:00.000Z</published>
-    <updated>2016-11-22T07:58:28.384Z</updated>
+    <updated>2016-11-23T01:05:46.401Z</updated>
     
     <content type="html"><![CDATA[<h4 id="R安装"><a href="#R安装" class="headerlink" title="R安装"></a>R安装</h4><ol>
 <li>R安装包下载地址：<a href="https://mirrors.tuna.tsinghua.edu.cn/CRAN/index.html" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/CRAN/index.html</a>  </li>
@@ -248,11 +275,11 @@ server {
       <category term="博客" scheme="https://yanlongchn.github.io/categories/Program/Blog/"/>
     
     
+      <category term="LetsEncrypt" scheme="https://yanlongchn.github.io/tags/LetsEncrypt/"/>
+    
       <category term="Ghost" scheme="https://yanlongchn.github.io/tags/Ghost/"/>
     
       <category term="CentOS" scheme="https://yanlongchn.github.io/tags/CentOS/"/>
-    
-      <category term="LetsEncrypt" scheme="https://yanlongchn.github.io/tags/LetsEncrypt/"/>
     
   </entry>
   
@@ -454,11 +481,11 @@ net.ipv4.tcp_mtu_probing = 1
       <category term="博客" scheme="https://yanlongchn.github.io/categories/Program/Blog/"/>
     
     
+      <category term="LetsEncrypt" scheme="https://yanlongchn.github.io/tags/LetsEncrypt/"/>
+    
       <category term="Ghost" scheme="https://yanlongchn.github.io/tags/Ghost/"/>
     
       <category term="CentOS" scheme="https://yanlongchn.github.io/tags/CentOS/"/>
-    
-      <category term="LetsEncrypt" scheme="https://yanlongchn.github.io/tags/LetsEncrypt/"/>
     
   </entry>
   
