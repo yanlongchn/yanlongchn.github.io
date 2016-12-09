@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yanlongchn.github.io/"/>
-  <updated>2016-11-23T01:05:42.979Z</updated>
+  <updated>2016-12-09T01:39:02.263Z</updated>
   <id>https://yanlongchn.github.io/</id>
   
   <author>
@@ -16,11 +16,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>R版本更新 - installr包</title>
+    <link href="https://yanlongchn.github.io/2016/12/09/R%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0-installr%E5%8C%85/"/>
+    <id>https://yanlongchn.github.io/2016/12/09/R版本更新-installr包/</id>
+    <published>2016-12-09T01:34:58.000Z</published>
+    <updated>2016-12-09T01:39:02.263Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;很久没有更新R，但是又想去R的官网上去看有没有版本更新，怎么办？</p>
+<a id="more"></a>
+<p>install.packages(“installr”)<br>require(installr)<br>这两行命令可以在RStudio或者R上运行。installr包有一系列的函数<br>updateR, install.R, install.RStudio, install.Rtools, install.pandoc, install.MikTeX, install.Git, install.git, install.GraphicsMagick, install.ImageMagick, check.for.updates.R, install.URL, install.packages.zip.<br>但是最简单实用的函数就是installr()。在WINDOWS系统下的RStudio中运行installr()  时，会弹出一个对话框，问你需要更新什么软件，看这个list就知道installr()  可以实现多少软件的更新（注意如果要更新RStudio，那么最好在R里跑命令）。  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;很久没有更新R，但是又想去R的官网上去看有没有版本更新，怎么办？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据" scheme="https://yanlongchn.github.io/categories/Date/"/>
+    
+      <category term="编程" scheme="https://yanlongchn.github.io/categories/Date/Program/"/>
+    
+    
+      <category term="R" scheme="https://yanlongchn.github.io/tags/R/"/>
+    
+      <category term="数据分析" scheme="https://yanlongchn.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CPDA第二日</title>
     <link href="https://yanlongchn.github.io/2016/11/23/CPDA%E7%AC%AC%E4%BA%8C%E6%97%A5/"/>
     <id>https://yanlongchn.github.io/2016/11/23/CPDA第二日/</id>
     <published>2016-11-23T00:45:27.000Z</published>
-    <updated>2016-11-23T01:05:42.979Z</updated>
+    <updated>2016-12-09T01:38:52.546Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;&emsp;</p>
 <a id="more"></a>]]></content>
@@ -31,14 +60,14 @@
     
     </summary>
     
-      <category term="1" scheme="https://yanlongchn.github.io/categories/1/"/>
+      <category term="数据" scheme="https://yanlongchn.github.io/categories/Date/"/>
     
-      <category term="2" scheme="https://yanlongchn.github.io/categories/1/2/"/>
+      <category term="编程" scheme="https://yanlongchn.github.io/categories/Date/Program/"/>
     
     
-      <category term="1" scheme="https://yanlongchn.github.io/tags/1/"/>
+      <category term="R" scheme="https://yanlongchn.github.io/tags/R/"/>
     
-      <category term="2" scheme="https://yanlongchn.github.io/tags/2/"/>
+      <category term="CPDA" scheme="https://yanlongchn.github.io/tags/CPDA/"/>
     
   </entry>
   
@@ -149,9 +178,9 @@ F-statistic: 188.8 on 5 and 144 DF,  p-value: &lt; 2.2e-16
       <category term="数据" scheme="https://yanlongchn.github.io/categories/Date/"/>
     
     
-      <category term="数据分析" scheme="https://yanlongchn.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
       <category term="R" scheme="https://yanlongchn.github.io/tags/R/"/>
+    
+      <category term="数据分析" scheme="https://yanlongchn.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
       <category term="RSTUDIO" scheme="https://yanlongchn.github.io/tags/RSTUDIO/"/>
     
@@ -464,15 +493,15 @@ net.ipv4.tcp_mtu_probing = 1
     <link href="https://yanlongchn.github.io/2016/11/14/%E8%AF%81%E4%B9%A6%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E4%BB%BB%E5%8A%A1/"/>
     <id>https://yanlongchn.github.io/2016/11/14/证书自动更新任务/</id>
     <published>2016-11-14T11:10:21.000Z</published>
-    <updated>2016-11-17T06:36:51.427Z</updated>
+    <updated>2016-12-05T05:37:07.754Z</updated>
     
-    <content type="html"><![CDATA[<h5 id="增加crontab自动任务"><a href="#增加crontab自动任务" class="headerlink" title="增加crontab自动任务"></a>增加crontab自动任务</h5><p><code>crontab -l</code><br><code>crontab -e</code><br><code>30 15 13 * * ./certbot-auto renew</code><br><code>15 4 * * * pm2 restart ghost</code><br><code>:wq!</code><br><a id="more"></a></p>
+    <content type="html"><![CDATA[<h5 id="增加crontab自动任务"><a href="#增加crontab自动任务" class="headerlink" title="增加crontab自动任务"></a>增加crontab自动任务</h5><p><code>crontab -l</code><br><code>crontab -e</code><br><code>30 3 13 * 1 ./certbot-auto renew</code><br><code>0 4 * * 1 pm2 restart ghost</code><br><code>:wq!</code><br><a id="more"></a></p>
 <h5 id="Python2-6-升级2-7-8"><a href="#Python2-6-升级2-7-8" class="headerlink" title="Python2.6 升级2.7.8"></a>Python2.6 升级2.7.8</h5><p><code>wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz</code><br><code>tar -xvf Python-2.7.8.tgz</code><br><code>cd Python-2.7.8</code><br><code>./configure --prefix=/usr/local/python2.7</code><br><code>make</code><br><code>make install</code><br>==创建链接来使系统默认python变为python2.7==<br>·mv /usr/bin/python /usr/bin/python2.6.9<br><code>ln -fs /usr/local/python2.7/bin/python2.7 /usr/bin/python</code><br>==修改yum配置(否则yum无法正常运行)==<br><code>vi /usr/bin/yum</code><br>==将第一行的#!/usr/bin/python修改为系统原有的python版本地址#!/usr/bin/python2.6.9==<br>==至此CentOS6.3系统Python已成功升级至2.7.6版本。==</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h5 id=&quot;增加crontab自动任务&quot;&gt;&lt;a href=&quot;#增加crontab自动任务&quot; class=&quot;headerlink&quot; title=&quot;增加crontab自动任务&quot;&gt;&lt;/a&gt;增加crontab自动任务&lt;/h5&gt;&lt;p&gt;&lt;code&gt;crontab -l&lt;/code&gt;&lt;br&gt;&lt;code&gt;crontab -e&lt;/code&gt;&lt;br&gt;&lt;code&gt;30 15 13 * * ./certbot-auto renew&lt;/code&gt;&lt;br&gt;&lt;code&gt;15 4 * * * pm2 restart ghost&lt;/code&gt;&lt;br&gt;&lt;code&gt;:wq!&lt;/code&gt;&lt;br&gt;
+      &lt;h5 id=&quot;增加crontab自动任务&quot;&gt;&lt;a href=&quot;#增加crontab自动任务&quot; class=&quot;headerlink&quot; title=&quot;增加crontab自动任务&quot;&gt;&lt;/a&gt;增加crontab自动任务&lt;/h5&gt;&lt;p&gt;&lt;code&gt;crontab -l&lt;/code&gt;&lt;br&gt;&lt;code&gt;crontab -e&lt;/code&gt;&lt;br&gt;&lt;code&gt;30 3 13 * 1 ./certbot-auto renew&lt;/code&gt;&lt;br&gt;&lt;code&gt;0 4 * * 1 pm2 restart ghost&lt;/code&gt;&lt;br&gt;&lt;code&gt;:wq!&lt;/code&gt;&lt;br&gt;
     
     </summary>
     
